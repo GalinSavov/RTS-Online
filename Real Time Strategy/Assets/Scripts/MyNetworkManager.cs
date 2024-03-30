@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-public class MyNetworkManager : NetworkManager
+namespace RTS.Network
 {
-    public override void OnServerAddPlayer(NetworkConnectionToClient conn)
+    public class MyNetworkManager : NetworkManager
     {
-        base.OnServerAddPlayer(conn);
-        Debug.Log("A player was added to the server");
-        Debug.Log($"There are now {numPlayers} players in the server");
+        //overrides the method and gives each player a unique display name
+        public override void OnServerAddPlayer(NetworkConnectionToClient conn)
+        {
+            base.OnServerAddPlayer(conn);
+            MyNetworkPlayer player = conn.identity.GetComponent<MyNetworkPlayer>();
+            player.SetDisplayName($"Player{numPlayers}");
+            player.SetPlayerColor();
+        }
     }
+
 }

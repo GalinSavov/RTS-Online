@@ -401,6 +401,7 @@
 -analyzer:"E:/Unity/2022.3.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"E:/Unity/2022.3.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/MyNetworkManager.cs"
+"Assets/Scripts/MyNetworkPlayer.cs"
 -langversion:9.0
 
 /deterministic
