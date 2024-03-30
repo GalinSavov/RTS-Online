@@ -172,7 +172,8 @@
         164,
         165,
         166,
-        167
+        167,
+        168
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -226,6 +227,18 @@
       "DebugActionIndex": 4
     },
     {
+      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/level0.resS",
+      "DisplayName": "Copying level0.resS",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/PlayerDataCache/Win64/Data/level0.resS"
+      ],
+      "Outputs": [
+        "Builds/Real Time Strategy_Data/level0.resS"
+      ],
+      "DebugActionIndex": 5
+    },
+    {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/resources.assets",
       "DisplayName": "Copying resources.assets",
       "ActionType": "CopyFiles",
@@ -235,7 +248,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/resources.assets"
       ],
-      "DebugActionIndex": 5
+      "DebugActionIndex": 6
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/resources.assets.resS",
@@ -247,7 +260,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/resources.assets.resS"
       ],
-      "DebugActionIndex": 6
+      "DebugActionIndex": 7
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Resources/unity_builtin_extra",
@@ -259,7 +272,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Resources/unity_builtin_extra"
       ],
-      "DebugActionIndex": 7
+      "DebugActionIndex": 8
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/RuntimeInitializeOnLoads.json",
@@ -271,7 +284,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/RuntimeInitializeOnLoads.json"
       ],
-      "DebugActionIndex": 8
+      "DebugActionIndex": 9
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/ScriptingAssemblies.json",
@@ -283,7 +296,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/ScriptingAssemblies.json"
       ],
-      "DebugActionIndex": 9
+      "DebugActionIndex": 10
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/sharedassets0.assets",
@@ -295,18 +308,6 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/sharedassets0.assets"
       ],
-      "DebugActionIndex": 10
-    },
-    {
-      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/sharedassets0.assets.resS",
-      "DisplayName": "Copying sharedassets0.assets.resS",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS"
-      ],
-      "Outputs": [
-        "Builds/Real Time Strategy_Data/sharedassets0.assets.resS"
-      ],
       "DebugActionIndex": 11
     },
     {
@@ -314,7 +315,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 16222,
+      "PayloadLength": 16308,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
@@ -333,13 +334,13 @@
         "Library/PlayerDataCache/Win64/Data/globalgamemanagers.assets",
         "Library/PlayerDataCache/Win64/Data/globalgamemanagers.assets.resS",
         "Library/PlayerDataCache/Win64/Data/level0",
+        "Library/PlayerDataCache/Win64/Data/level0.resS",
         "Library/PlayerDataCache/Win64/Data/resources.assets",
         "Library/PlayerDataCache/Win64/Data/resources.assets.resS",
         "Library/PlayerDataCache/Win64/Data/Resources/unity_builtin_extra",
         "Library/PlayerDataCache/Win64/Data/RuntimeInitializeOnLoads.json",
         "Library/PlayerDataCache/Win64/Data/ScriptingAssemblies.json",
         "Library/PlayerDataCache/Win64/Data/sharedassets0.assets",
-        "Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS",
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AIModule.dll",
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ARModule.dll",
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AccessibilityModule.dll",
@@ -408,12 +409,13 @@
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll",
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll",
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Mirror.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
@@ -425,14 +427,14 @@
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll",
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/SimpleWebTransport.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Mirror.Authenticators.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Mirror.Examples.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll",
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
@@ -1344,6 +1346,18 @@
       "DebugActionIndex": 82
     },
     {
+      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Assembly-CSharp.dll",
+      "DisplayName": "Copying Assembly-CSharp.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll"
+      ],
+      "Outputs": [
+        "Builds/Real Time Strategy_Data/Managed/Assembly-CSharp.dll"
+      ],
+      "DebugActionIndex": 83
+    },
+    {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
       "DisplayName": "Copying Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
       "ActionType": "CopyFiles",
@@ -1353,7 +1367,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll"
       ],
-      "DebugActionIndex": 83
+      "DebugActionIndex": 84
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll",
@@ -1365,7 +1379,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll"
       ],
-      "DebugActionIndex": 84
+      "DebugActionIndex": 85
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll",
@@ -1377,31 +1391,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll"
       ],
-      "DebugActionIndex": 85
-    },
-    {
-      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.Burst.dll",
-      "DisplayName": "Copying Unity.Burst.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll"
-      ],
-      "Outputs": [
-        "Builds/Real Time Strategy_Data/Managed/Unity.Burst.dll"
-      ],
       "DebugActionIndex": 86
-    },
-    {
-      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.dll",
-      "DisplayName": "Copying Unity.ProBuilder.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll"
-      ],
-      "Outputs": [
-        "Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.dll"
-      ],
-      "DebugActionIndex": 87
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.Stl.dll",
@@ -1413,7 +1403,31 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.Stl.dll"
       ],
+      "DebugActionIndex": 87
+    },
+    {
+      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.Burst.dll",
+      "DisplayName": "Copying Unity.Burst.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll"
+      ],
+      "Outputs": [
+        "Builds/Real Time Strategy_Data/Managed/Unity.Burst.dll"
+      ],
       "DebugActionIndex": 88
+    },
+    {
+      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.dll",
+      "DisplayName": "Copying Unity.ProBuilder.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll"
+      ],
+      "Outputs": [
+        "Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.dll"
+      ],
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Mirror.dll",
@@ -1425,7 +1439,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Mirror.dll"
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.Core.dll",
@@ -1437,7 +1451,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.Core.dll"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/UnityEngine.UI.dll",
@@ -1449,7 +1463,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/UnityEngine.UI.dll"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Mirror.Transports.dll",
@@ -1461,7 +1475,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Mirror.Transports.dll"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Mirror.Components.dll",
@@ -1473,7 +1487,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Mirror.Components.dll"
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 94
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.Csg.dll",
@@ -1485,7 +1499,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.Csg.dll"
       ],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 95
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.Flow.dll",
@@ -1497,7 +1511,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.Flow.dll"
       ],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Telepathy.dll",
@@ -1509,7 +1523,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Telepathy.dll"
       ],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 97
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll",
@@ -1521,7 +1535,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll"
       ],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 98
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.Timeline.dll",
@@ -1533,7 +1547,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.Timeline.dll"
       ],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.InputSystem.dll",
@@ -1544,18 +1558,6 @@
       ],
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.InputSystem.dll"
-      ],
-      "DebugActionIndex": 99
-    },
-    {
-      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.InputSystem.ForUI.dll",
-      "DisplayName": "Copying Unity.InputSystem.ForUI.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll"
-      ],
-      "Outputs": [
-        "Builds/Real Time Strategy_Data/Managed/Unity.InputSystem.ForUI.dll"
       ],
       "DebugActionIndex": 100
     },
@@ -1572,6 +1574,18 @@
       "DebugActionIndex": 101
     },
     {
+      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.InputSystem.ForUI.dll",
+      "DisplayName": "Copying Unity.InputSystem.ForUI.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll"
+      ],
+      "Outputs": [
+        "Builds/Real Time Strategy_Data/Managed/Unity.InputSystem.ForUI.dll"
+      ],
+      "DebugActionIndex": 102
+    },
+    {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Mirror.Authenticators.dll",
       "DisplayName": "Copying Mirror.Authenticators.dll",
       "ActionType": "CopyFiles",
@@ -1581,7 +1595,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Mirror.Authenticators.dll"
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll",
@@ -1593,7 +1607,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll"
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 104
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Mirror.Examples.dll",
@@ -1605,7 +1619,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Mirror.Examples.dll"
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 105
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.Poly2Tri.dll",
@@ -1616,18 +1630,6 @@
       ],
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.ProBuilder.Poly2Tri.dll"
-      ],
-      "DebugActionIndex": 105
-    },
-    {
-      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.Mathematics.dll",
-      "DisplayName": "Copying Unity.Mathematics.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll"
-      ],
-      "Outputs": [
-        "Builds/Real Time Strategy_Data/Managed/Unity.Mathematics.dll"
       ],
       "DebugActionIndex": 106
     },
@@ -1644,6 +1646,18 @@
       "DebugActionIndex": 107
     },
     {
+      "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.Mathematics.dll",
+      "DisplayName": "Copying Unity.Mathematics.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll"
+      ],
+      "Outputs": [
+        "Builds/Real Time Strategy_Data/Managed/Unity.Mathematics.dll"
+      ],
+      "DebugActionIndex": 108
+    },
+    {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.TextMeshPro.dll",
       "DisplayName": "Copying Unity.TextMeshPro.dll",
       "ActionType": "CopyFiles",
@@ -1653,7 +1667,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.TextMeshPro.dll"
       ],
-      "DebugActionIndex": 108
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll",
@@ -1665,7 +1679,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll"
       ],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.State.dll",
@@ -1677,7 +1691,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.State.dll"
       ],
-      "DebugActionIndex": 110
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Cinemachine.dll",
@@ -1689,7 +1703,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Cinemachine.dll"
       ],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/kcp2k.dll",
@@ -1701,7 +1715,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/kcp2k.dll"
       ],
-      "DebugActionIndex": 112
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/BouncyCastle.Cryptography.dll",
@@ -1713,7 +1727,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/BouncyCastle.Cryptography.dll"
       ],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
@@ -1725,7 +1739,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
-      "DebugActionIndex": 114
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Unity.Burst.Unsafe.dll",
@@ -1737,7 +1751,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Unity.Burst.Unsafe.dll"
       ],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Newtonsoft.Json.dll",
@@ -1749,7 +1763,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Newtonsoft.Json.dll"
       ],
-      "DebugActionIndex": 116
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Runtime.dll",
@@ -1761,7 +1775,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Runtime.dll"
       ],
-      "DebugActionIndex": 117
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/netstandard.dll",
@@ -1773,7 +1787,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/netstandard.dll"
       ],
-      "DebugActionIndex": 118
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/Mono.Security.dll",
@@ -1785,7 +1799,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/Mono.Security.dll"
       ],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.ComponentModel.Composition.dll",
@@ -1797,7 +1811,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.ComponentModel.Composition.dll"
       ],
-      "DebugActionIndex": 120
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Configuration.dll",
@@ -1809,7 +1823,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Configuration.dll"
       ],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Core.dll",
@@ -1821,7 +1835,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Core.dll"
       ],
-      "DebugActionIndex": 122
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Data.DataSetExtensions.dll",
@@ -1833,7 +1847,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Data.DataSetExtensions.dll"
       ],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Data.dll",
@@ -1845,7 +1859,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Data.dll"
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Drawing.dll",
@@ -1857,7 +1871,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Drawing.dll"
       ],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.EnterpriseServices.dll",
@@ -1869,7 +1883,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.EnterpriseServices.dll"
       ],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.IO.Compression.FileSystem.dll",
@@ -1881,7 +1895,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.IO.Compression.FileSystem.dll"
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.IO.Compression.dll",
@@ -1893,7 +1907,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.IO.Compression.dll"
       ],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Net.Http.dll",
@@ -1905,7 +1919,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Net.Http.dll"
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Numerics.dll",
@@ -1917,7 +1931,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Numerics.dll"
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Runtime.Serialization.dll",
@@ -1929,7 +1943,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Runtime.Serialization.dll"
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Security.dll",
@@ -1941,7 +1955,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Security.dll"
       ],
-      "DebugActionIndex": 132
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.ServiceModel.Internals.dll",
@@ -1953,7 +1967,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.ServiceModel.Internals.dll"
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Transactions.dll",
@@ -1965,7 +1979,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Transactions.dll"
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Xml.Linq.dll",
@@ -1977,7 +1991,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Xml.Linq.dll"
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.Xml.dll",
@@ -1989,7 +2003,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.Xml.dll"
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/System.dll",
@@ -2001,7 +2015,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/System.dll"
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Managed/mscorlib.dll",
@@ -2013,14 +2027,14 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Managed/mscorlib.dll"
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker",
       "DisplayName": "Running Burst Compiler",
       "ActionType": "RunRPCCommand",
-      "PayloadOffset": 16428,
-      "PayloadLength": 15300,
+      "PayloadOffset": 16514,
+      "PayloadLength": 15400,
       "PayloadDebugContentSnippet": "{\"PlayerBuildProgramLibrary.Da",
       "Action": "GenerateNativePluginsForAssemblies",
       "Inputs": [
@@ -2092,12 +2106,13 @@
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll",
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "E:/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll",
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Mirror.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
@@ -2109,14 +2124,14 @@
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll",
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/SimpleWebTransport.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Mirror.Authenticators.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Mirror.Examples.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll",
-        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.dll",
+        "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll",
         "E:/Unity/RTS/RTS-Online/Real Time Strategy/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
@@ -2181,7 +2196,7 @@
           "Recurse": 1
         }
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Plugins/x86_64/lib_burst_generated.dll",
@@ -2194,22 +2209,22 @@
         "Builds/Real Time Strategy_Data/Plugins/x86_64/lib_burst_generated.dll"
       ],
       "ToBuildDependencies": [
-        139
+        140
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 31817,
+      "PayloadOffset": 32003,
       "PayloadLength": 33,
       "PayloadDebugContentSnippet": "DefaultCompany\nReal Time Strat",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info"
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/app.info",
@@ -2222,9 +2237,9 @@
         "Builds/Real Time Strategy_Data/app.info"
       ],
       "ToBuildDependencies": [
-        141
+        142
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy_Data/Resources/unity default resources",
@@ -2236,7 +2251,7 @@
       "Outputs": [
         "Builds/Real Time Strategy_Data/Resources/unity default resources"
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "CopyFiles Builds/Real Time Strategy.exe",
@@ -2248,7 +2263,7 @@
       "Outputs": [
         "Builds/Real Time Strategy.exe"
       ],
-      "DebugActionIndex": 144
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -2260,7 +2275,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -2272,7 +2287,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -2284,7 +2299,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -2296,7 +2311,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -2308,7 +2323,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -2320,7 +2335,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
-      "DebugActionIndex": 150
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -2332,7 +2347,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
-      "DebugActionIndex": 151
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -2344,7 +2359,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 152
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -2356,7 +2371,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 153
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -2368,7 +2383,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
-      "DebugActionIndex": 154
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -2380,7 +2395,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
-      "DebugActionIndex": 155
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -2392,7 +2407,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
-      "DebugActionIndex": 156
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -2404,7 +2419,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 157
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -2416,7 +2431,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 158
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -2428,7 +2443,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
-      "DebugActionIndex": 159
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -2440,7 +2455,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
-      "DebugActionIndex": 160
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -2452,7 +2467,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
-      "DebugActionIndex": 161
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -2464,7 +2479,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
-      "DebugActionIndex": 162
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/config",
@@ -2476,7 +2491,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/config"
       ],
-      "DebugActionIndex": 163
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "CopyFiles Builds/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -2488,7 +2503,7 @@
       "Outputs": [
         "Builds/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
-      "DebugActionIndex": 164
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "CopyFiles Builds/UnityCrashHandler64.exe",
@@ -2500,7 +2515,7 @@
       "Outputs": [
         "Builds/UnityCrashHandler64.exe"
       ],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "CopyFiles Builds/UnityPlayer.dll",
@@ -2512,7 +2527,7 @@
       "Outputs": [
         "Builds/UnityPlayer.dll"
       ],
-      "DebugActionIndex": 166
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "Player",
@@ -2656,8 +2671,8 @@
         136,
         137,
         138,
-        140,
-        142,
+        139,
+        141,
         143,
         144,
         145,
@@ -2681,10 +2696,11 @@
         163,
         164,
         165,
-        166
+        166,
+        167
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 167
+      "DebugActionIndex": 168
     }
   ],
   "FileSignatures": [
@@ -2889,7 +2905,7 @@
   ],
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 167
+          "Player": 168
         }
 ,  "DefaultNodes": [
     0
