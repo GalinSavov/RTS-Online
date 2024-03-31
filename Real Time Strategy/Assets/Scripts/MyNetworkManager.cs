@@ -11,9 +11,10 @@ namespace RTS.Network
         {
             base.OnServerAddPlayer(conn);
             MyNetworkPlayer player = conn.identity.GetComponent<MyNetworkPlayer>();
-            player.SetDisplayName($"Player{numPlayers}");
+            player.SetDisplayName($"Player {numPlayers}");
             player.SetPlayerColor();
         }
+
     }
 
 }
