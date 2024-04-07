@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace RTS.Core
+{
+    public class UnitCommandGiver : MonoBehaviour
+    {
+        [SerializeField] private UnitSelectionHandler unitSelectionHandler = null;
+        [SerializeField] private LayerMask layerMask = new LayerMask();
+
+        private Camera mainCamera;
+        private void Start()
+        {
+            mainCamera = Camera.main;
+        }
+
+        private void Update()
+        {
+            if (!Mouse.current.rightButton.wasPressedThisFrame) return;
+
+            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            if (!Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity,layerMask)) return;
+
+            TryMove(raycastHit.point);
+        }
+
+        private void TryMove(Vector3 point)
+        {
+            foreach (Unit unit in unitSelectionHandler.SelectedUnits)
+            {
+                unit.GetUnitMovement().CmdMovePlayerToPosition(point);
+            }
+        }
+    }
+}
