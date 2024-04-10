@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2760307043144496350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2448201558796366610}
+  m_Layer: 0
+  m_Name: Projectile Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2448201558796366610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2760307043144496350}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6650928520456140991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6209996939934773945
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +133,7 @@ GameObject:
   - component: {fileID: 7002788642274495949}
   - component: {fileID: 1529743994701381691}
   - component: {fileID: 3987698088036788792}
+  - component: {fileID: 5996483220792005911}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -125,6 +157,7 @@ Transform:
   - {fileID: 3335914830910462973}
   - {fileID: 6211840853367628405}
   - {fileID: 1071129640228416204}
+  - {fileID: 2448201558796366610}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1845154437962951030
@@ -317,6 +350,28 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+--- !u!114 &5996483220792005911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8064279436465328553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97936ab42d17d8848a33df9fb4766a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  targeter: {fileID: 3987698088036788792}
+  projectilePrefab: {fileID: 3885943848999722114, guid: 9abaf2632d18b444f8ed5eec2247792e,
+    type: 3}
+  projectileSpawnPoint: {fileID: 2448201558796366610}
+  fireRate: 1
+  attackRange: 12
+  rotationSpeed: 20
 --- !u!1 &8288559383309781069
 GameObject:
   m_ObjectHideFlags: 0
