@@ -9,13 +9,27 @@ namespace RTS.Core
     {
         [SerializeField] private NavMeshAgent playerNavMesh = null;
         [SerializeField] private Targeter targeter = null;
+        [SerializeField] private float chaseRange = 6f;
 
         #region Server
 
         [ServerCallback]
         private void Update()
         {
-
+            Targetable target = targeter.GetTarget();
+            if (target != null)
+            {
+                //more efficient than Vector3.Distance()
+                if ((playerNavMesh.transform.position - target.transform.position).sqrMagnitude > chaseRange * chaseRange)
+                {
+                    playerNavMesh.SetDestination(target.transform.position);
+                }
+                else if (playerNavMesh.hasPath)
+                {
+                    playerNavMesh.ResetPath();
+                }
+                return;
+            }
             if (!playerNavMesh.hasPath) return;
             //when the Unit reaches the stopping distance, it will clear its path and no longer push other units around
             //if there are 3 units, 1 will get there first and stop fighting, then number 2 will get there and stop fighting

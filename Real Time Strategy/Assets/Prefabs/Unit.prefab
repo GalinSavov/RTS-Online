@@ -183,6 +183,7 @@ MonoBehaviour:
   syncInterval: 0
   playerNavMesh: {fileID: 1542970134504267352}
   targeter: {fileID: 3987698088036788792}
+  chaseRange: 10
 --- !u!114 &2835767960321853695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +317,6 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  target: {fileID: 0}
 --- !u!1 &8288559383309781069
 GameObject:
   m_ObjectHideFlags: 0
