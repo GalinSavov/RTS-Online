@@ -1,4 +1,5 @@
 using Mirror;
+using RTS.Combat;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,7 +7,8 @@ namespace RTS.Core
 {
     public class UnitMovement : NetworkBehaviour
     {
-        [SerializeField] NavMeshAgent playerNavMesh = null;
+        [SerializeField] private NavMeshAgent playerNavMesh = null;
+        [SerializeField] private Targeter targeter = null;
 
         #region Server
 
@@ -26,6 +28,7 @@ namespace RTS.Core
         [Command]
         public void CmdMovePlayerToPosition(Vector3 position)
         {
+            targeter.ClearTarget();
 
             if (!NavMesh.SamplePosition(position, out NavMeshHit navMeshHit, 1f, NavMesh.AllAreas)) return;
             

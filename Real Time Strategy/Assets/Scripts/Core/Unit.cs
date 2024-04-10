@@ -1,4 +1,5 @@
 using Mirror;
+using RTS.Combat;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace RTS.Core
         [SerializeField] private UnityEvent OnDeselected = null;
 
         [SerializeField] private UnitMovement unitMovement = null;
+        [SerializeField] private Targeter targeter = null;
 
         //events to be called on the server when a unit spawns/despawns
         //it is static because the server does not need to have a reference to what unit it was exactly, at least for now
@@ -60,6 +62,10 @@ namespace RTS.Core
         public UnitMovement GetUnitMovement()
         {
             return unitMovement;
+        }
+        public Targeter GetTargeter()
+        {
+            return targeter;
         }
 
         //used to store the units for each unique client in the game

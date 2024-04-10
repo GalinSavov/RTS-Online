@@ -1,3 +1,4 @@
+using RTS.Combat;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,7 +26,26 @@ namespace RTS.Core
             Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (!Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity,layerMask)) return;
 
+            if(raycastHit.collider.TryGetComponent(out Targetable targetable))
+            {
+                if(!targetable.isOwned)
+                {
+                    TryTarget(targetable);
+                    return;
+                }
+                TryMove(raycastHit.point);
+                return;
+            }
+
             TryMove(raycastHit.point);
+        }
+
+        private void TryTarget(Targetable targetable)
+        {
+            foreach (Unit unit in unitSelectionHandler.SelectedUnits)
+            {
+                unit.GetTargeter().CmdSetTarget(targetable.gameObject);
+            }
         }
 
         private void TryMove(Vector3 point)
