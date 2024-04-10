@@ -33,7 +33,7 @@ namespace RTS.Building
         public void OnPointerClick(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;
-            if (!authority) return;
+            if (!isOwned) return;
 
             CmdSpawnUnit();
         }

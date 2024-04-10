@@ -20,8 +20,9 @@ namespace RTS.Core
         private void Update()
         {
             if (!Mouse.current.rightButton.wasPressedThisFrame) return;
+            
 
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (!Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity,layerMask)) return;
 
             TryMove(raycastHit.point);
