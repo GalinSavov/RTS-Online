@@ -10,6 +10,7 @@ namespace RTS.Core
         [SerializeField] Rigidbody rb = null;
         [SerializeField] private float projectileSpeed = 10f;
         [SerializeField] private float projectileLifetime = 5f;
+        [SerializeField] private int damageAmount = 15;
 
         // Start is called before the first frame update
         void Start()
@@ -28,6 +29,21 @@ namespace RTS.Core
             NetworkServer.Destroy(gameObject);
         }
 
+        [ServerCallback]
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.TryGetComponent(out NetworkIdentity networkIdentity))
+            {
+                if (networkIdentity.connectionToClient == connectionToClient) return;
+
+            }
+            if(other.TryGetComponent(out Health health))
+            {
+                health.DealDamage(damageAmount);
+            }
+
+            DestroyProjectile();
+        }
 
     }
 

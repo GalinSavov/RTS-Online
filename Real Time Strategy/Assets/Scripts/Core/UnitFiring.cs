@@ -22,8 +22,8 @@ namespace RTS.Core
         private void Update()
         {
             Targetable target = targeter.GetTarget();
-            if (!CanFireAtTarget()) return;
             if (target == null) return;
+            if (!CanFireAtTarget()) return;
 
             Quaternion targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
 

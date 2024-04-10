@@ -143,6 +143,7 @@ MonoBehaviour:
   rb: {fileID: 3080174751566246295}
   projectileSpeed: 10
   projectileLifetime: 5
+  damageAmount: 25
 --- !u!54 &3080174751566246295
 Rigidbody:
   m_ObjectHideFlags: 0
