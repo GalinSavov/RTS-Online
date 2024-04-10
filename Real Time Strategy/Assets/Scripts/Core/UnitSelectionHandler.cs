@@ -25,7 +25,7 @@ namespace RTS.Core
 
         private void Update()
         {
-            if(player == null)
+            if (player == null)
             {
                 player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
 
@@ -61,12 +61,15 @@ namespace RTS.Core
         private void StartSelectionArea()
         {
             //deselect a unit
-
-            foreach (Unit unit in SelectedUnits)
+            if (!Keyboard.current.leftShiftKey.isPressed)
             {
-                unit.Deselect();
+                foreach (Unit unit in SelectedUnits)
+                {
+                    unit.Deselect();
+                }
+                SelectedUnits.Clear();
             }
-            SelectedUnits.Clear();
+
 
             //enable the drag box when we first click and set the start position of the mouse
             dragBoxSelectionArea.gameObject.SetActive(true);
@@ -79,7 +82,7 @@ namespace RTS.Core
             dragBoxSelectionArea.gameObject.SetActive(false);
 
             //check if the player has dragged the mouse to multi-select
-            if(dragBoxSelectionArea.sizeDelta.magnitude == 0)
+            if (dragBoxSelectionArea.sizeDelta.magnitude == 0)
             {
                 //select and enable the sprite on a clicked unit
                 Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -98,14 +101,16 @@ namespace RTS.Core
             }
             //to check if the Unit is within bounds of the drag area
             //if the Unit's x value is greater than drag box min AND less than drag box max, it is within bounds
-            Vector2 min = dragBoxSelectionArea.anchoredPosition - dragBoxSelectionArea.sizeDelta/2;
+            Vector2 min = dragBoxSelectionArea.anchoredPosition - dragBoxSelectionArea.sizeDelta / 2;
             Vector2 max = dragBoxSelectionArea.anchoredPosition + dragBoxSelectionArea.sizeDelta / 2;
 
             foreach (Unit unit in player.GetMyUnits())
             {
+                if (SelectedUnits.Contains(unit)) continue;
+
                 Vector3 unitScreenPosition = mainCamera.WorldToScreenPoint(unit.transform.position);
 
-                if(unitScreenPosition.x > min.x && unitScreenPosition.x < max.x 
+                if (unitScreenPosition.x > min.x && unitScreenPosition.x < max.x
                     && unitScreenPosition.y > min.y && unitScreenPosition.y < max.y)
                 {
                     SelectedUnits.Add(unit);
