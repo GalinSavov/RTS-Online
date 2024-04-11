@@ -21,6 +21,18 @@ namespace RTS.Core
         private void Start()
         {
             mainCamera = Camera.main;
+            Unit.ClientAuthorityOnUnitDespawned += HandleAuthorityOnUnitDespawned;
+        }
+
+        private void OnDestroy()
+        {
+            Unit.ClientAuthorityOnUnitDespawned -= HandleAuthorityOnUnitDespawned;
+        }
+
+        //this handles when a destroyed Unit still exists in the list, it should be removed from the list
+        private void HandleAuthorityOnUnitDespawned(Unit unit)
+        {
+            SelectedUnits.Remove(unit);
         }
 
         private void Update()

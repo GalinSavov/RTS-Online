@@ -190,6 +190,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  health: {fileID: 5110467230924497687}
   unitPrefab: {fileID: 8064279436465328553, guid: 2490bede7240b89469c177fb90cd8204,
     type: 3}
   unitSpawnPoint: {fileID: 7691927399397126360}

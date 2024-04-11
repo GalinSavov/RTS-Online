@@ -16,6 +16,7 @@ namespace RTS.Core
 
         [SerializeField] private UnitMovement unitMovement = null;
         [SerializeField] private Targeter targeter = null;
+        [SerializeField] private Health health = null;
 
         //events to be called on the server when a unit spawns/despawns
         //it is static because the server does not need to have a reference to what unit it was exactly, at least for now
@@ -34,13 +35,20 @@ namespace RTS.Core
         public override void OnStartServer()
         {
             ServerOnUnitSpawned?.Invoke(this);
+            health.ServerOnDie += HandleServerOnDie;
         }
-
         //a unit has been despawned from the server; happens BEFORE the RTS Player has been despawned from the server
         public override void OnStopServer()
         {
             ServerOnUnitDespawned?.Invoke(this);
+            health.ServerOnDie -= HandleServerOnDie;
         }
+        [Server]
+        private void HandleServerOnDie()
+        {
+            NetworkServer.Destroy(gameObject);
+        }
+
 
         #endregion
 
@@ -69,14 +77,15 @@ namespace RTS.Core
         }
 
         //used to store the units for each unique client in the game
-        public override void OnStartClient()
+        public override void OnStartAuthority()
         {
-            if (!isClientOnly || !isOwned) return;
             ClientAuthorityOnUnitSpawned?.Invoke(this);
+
         }
+        
         public override void OnStopClient()
         {
-            if (!isClientOnly || !isOwned) return;
+            if (!isOwned) return;
             ClientAuthorityOnUnitDespawned?.Invoke(this);
         }
 

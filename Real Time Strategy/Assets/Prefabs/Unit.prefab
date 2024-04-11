@@ -267,6 +267,7 @@ MonoBehaviour:
         m_CallState: 2
   unitMovement: {fileID: 4576820756614848437}
   targeter: {fileID: 3987698088036788792}
+  health: {fileID: 9145705733738747355}
 --- !u!114 &7317962293149814079
 MonoBehaviour:
   m_ObjectHideFlags: 0

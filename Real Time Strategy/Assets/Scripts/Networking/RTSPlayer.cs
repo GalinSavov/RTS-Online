@@ -51,26 +51,24 @@ namespace RTS.Network
 
         #region Client
 
-        public override void OnStartClient()
+        public override void OnStartAuthority()
         {
-            if (!isClientOnly) return;
+            if (NetworkServer.active) return;
             Unit.ClientAuthorityOnUnitSpawned += HandleClientAuthorityOnUnitSpawned;
             Unit.ClientAuthorityOnUnitDespawned += HandleClientAuthorityOnUnitDespawned;
         }
         public override void OnStopClient()
         {
-            if (!isClientOnly) return;
+            if (!isClientOnly || !isOwned) return;
             Unit.ClientAuthorityOnUnitSpawned -= HandleClientAuthorityOnUnitSpawned;
             Unit.ClientAuthorityOnUnitDespawned -= HandleClientAuthorityOnUnitDespawned;
         }
         private void HandleClientAuthorityOnUnitSpawned(Unit unit)
         {
-            if (!isOwned) return;
             myUnits.Add(unit);
         }
         private void HandleClientAuthorityOnUnitDespawned(Unit unit)
-        {
-            if (!isOwned) return;
+        { 
             myUnits.Remove(unit);
         }
         
