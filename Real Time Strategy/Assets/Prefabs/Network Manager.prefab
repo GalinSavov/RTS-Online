@@ -53,8 +53,8 @@ MonoBehaviour:
   sendRate: 60
   autoStartServerBuild: 0
   autoConnectClientBuild: 0
-  offlineScene: 
-  onlineScene: 
+  offlineScene: Assets/Scenes/MenuScene.unity
+  onlineScene: Assets/Scenes/Map_01Scene.unity
   transport: {fileID: 1228711913891762031}
   networkAddress: localhost
   maxConnections: 100
@@ -85,6 +85,8 @@ MonoBehaviour:
   evaluationInterval: 3
   timeInterpolationGui: 0
   unitSpawnerPrefab: {fileID: 8287116406934344454, guid: a69adeae44f460143b748512a53285a8,
+    type: 3}
+  gameOverHandlerPrefab: {fileID: 9159047293277334838, guid: 4ef5fe80e209f7348a835cbcdc821566,
     type: 3}
 --- !u!114 &1228711913891762031
 MonoBehaviour:

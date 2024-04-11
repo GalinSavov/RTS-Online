@@ -1,4 +1,5 @@
 using Mirror;
+using RTS.Combat;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace RTS.Building
         [Server]
         private void HandleServerOnDie()
         {
-            NetworkServer.Destroy(gameObject);
+           // NetworkServer.Destroy(gameObject);
         }
 
         [Command]
