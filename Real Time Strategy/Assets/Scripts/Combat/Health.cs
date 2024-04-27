@@ -1,4 +1,5 @@
 using Mirror;
+using RTS.Building;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +20,21 @@ namespace RTS.Combat
 
         public override void OnStartServer()
         {
+            UnitBase.OnServerPlayerDie += HandleOnServerPlayerDie;
             currentHealth = maxHealth;
+        }
+        public override void OnStopServer()
+        {
+            UnitBase.OnServerPlayerDie -= HandleOnServerPlayerDie;
+
+        }
+
+        [Server]
+        private void HandleOnServerPlayerDie(int playerConnectionID)
+        {
+            if (connectionToClient.connectionId != playerConnectionID) return;
+
+            DealDamage(currentHealth);
         }
 
         [Server]
@@ -44,6 +59,10 @@ namespace RTS.Combat
         private void HandleHealthUpdated(int oldHealth, int newHealth)
         {
             ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
+        }
+        public int GetCurrentHealth()
+        {
+            return currentHealth;
         }
         #endregion
     }

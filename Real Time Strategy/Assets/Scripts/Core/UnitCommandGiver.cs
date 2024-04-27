@@ -1,3 +1,4 @@
+using RTS.Building;
 using RTS.Combat;
 using System;
 using System.Collections;
@@ -16,6 +17,16 @@ namespace RTS.Core
         private void Start()
         {
             mainCamera = Camera.main;
+            GameOverHandler.OnCLientGameOver += HandleOnClientGameOver;
+        }
+        private void OnDestroy()
+        {
+            GameOverHandler.OnCLientGameOver -= HandleOnClientGameOver;
+        }
+
+        private void HandleOnClientGameOver(string obj)
+        {
+            enabled = false;
         }
 
         private void Update()

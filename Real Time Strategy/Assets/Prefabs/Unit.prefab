@@ -126,11 +126,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6650928520456140991}
   - component: {fileID: 1845154437962951030}
+  - component: {fileID: 7317962293149814079}
   - component: {fileID: 1542970134504267352}
+  - component: {fileID: 7002788642274495949}
   - component: {fileID: 4576820756614848437}
   - component: {fileID: 2835767960321853695}
-  - component: {fileID: 7317962293149814079}
-  - component: {fileID: 7002788642274495949}
   - component: {fileID: 1529743994701381691}
   - component: {fileID: 3987698088036788792}
   - component: {fileID: 5996483220792005911}
@@ -180,6 +180,40 @@ MonoBehaviour:
   serverOnly: 0
   visibility: 0
   hasSpawned: 0
+--- !u!114 &7317962293149814079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8064279436465328553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 6650928520456140991}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
 --- !u!195 &1542970134504267352
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -202,6 +236,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &7002788642274495949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8064279436465328553}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.110652, y: 2.8661273, z: 3.133954}
+  m_Center: {x: 0.07185316, y: 1.9330634, z: 0.04200697}
 --- !u!114 &4576820756614848437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,61 +323,6 @@ MonoBehaviour:
   unitMovement: {fileID: 4576820756614848437}
   targeter: {fileID: 3987698088036788792}
   health: {fileID: 9145705733738747355}
---- !u!114 &7317962293149814079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064279436465328553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
-  target: {fileID: 6650928520456140991}
-  syncPosition: 1
-  syncRotation: 1
-  syncScale: 0
-  onlySyncOnChange: 1
-  compressRotation: 1
-  interpolatePosition: 1
-  interpolateRotation: 1
-  interpolateScale: 1
-  coordinateSpace: 0
-  sendIntervalMultiplier: 1
-  timelineOffset: 0
-  showGizmos: 0
-  showOverlay: 0
-  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
-  onlySyncOnChangeCorrectionMultiplier: 2
-  rotationSensitivity: 0.01
-  positionPrecision: 0.01
-  scalePrecision: 0.01
---- !u!65 &7002788642274495949
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064279436465328553}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.110652, y: 2.8661273, z: 3.133954}
-  m_Center: {x: 0.07185316, y: 1.9330634, z: 0.04200697}
 --- !u!114 &1529743994701381691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,8 +374,8 @@ MonoBehaviour:
     type: 3}
   projectileSpawnPoint: {fileID: 2448201558796366610}
   fireRate: 1
-  attackRange: 12
-  rotationSpeed: 20
+  attackRange: 15
+  rotationSpeed: 50
 --- !u!114 &9145705733738747355
 MonoBehaviour:
   m_ObjectHideFlags: 0

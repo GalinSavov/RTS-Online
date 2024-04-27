@@ -11,7 +11,7 @@ namespace RTS.Combat
         [SerializeField] private GameObject healthBarParent = null;
         [SerializeField] private Image healthBarImage = null;
 
-        private void Awake()
+        private void Start()
         {
             health.ClientOnHealthUpdated += HandleHealthUpdated;
         }

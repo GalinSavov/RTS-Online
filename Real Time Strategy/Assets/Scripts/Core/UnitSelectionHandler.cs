@@ -1,4 +1,5 @@
 using Mirror;
+using RTS.Building;
 using RTS.Network;
 using System;
 using System.Collections;
@@ -22,11 +23,19 @@ namespace RTS.Core
         {
             mainCamera = Camera.main;
             Unit.ClientAuthorityOnUnitDespawned += HandleAuthorityOnUnitDespawned;
+            GameOverHandler.OnCLientGameOver += HandleOnClientGameOver;
         }
 
         private void OnDestroy()
         {
             Unit.ClientAuthorityOnUnitDespawned -= HandleAuthorityOnUnitDespawned;
+            GameOverHandler.OnCLientGameOver -= HandleOnClientGameOver;
+
+        }
+
+        private void HandleOnClientGameOver(string obj)
+        {
+           enabled = false;
         }
 
         //this handles when a destroyed Unit still exists in the list, it should be removed from the list

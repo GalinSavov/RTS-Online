@@ -12,6 +12,7 @@ namespace RTS.Building
 
         [SerializeField] private Health health;
 
+        public static event Action<int> OnServerPlayerDie;
         public static event Action<UnitBase> OnServerBaseSpawned;
         public static event Action<UnitBase> OnServerBaseDespawned;
 
@@ -31,6 +32,7 @@ namespace RTS.Building
         [Server]
         private void HandleServerOnDie()
         {
+            OnServerPlayerDie?.Invoke(connectionToClient.connectionId);
             NetworkServer.Destroy(gameObject);
         }
         #endregion

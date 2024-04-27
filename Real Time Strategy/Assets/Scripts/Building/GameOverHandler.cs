@@ -9,6 +9,7 @@ namespace RTS.Building
     public class GameOverHandler : NetworkBehaviour
     {
         public static event Action<string> OnCLientGameOver;
+        public static event Action OnServerGameOver;
         private List<UnitBase> unitBases = new List<UnitBase>();
 
         #region Server
@@ -40,6 +41,8 @@ namespace RTS.Building
 
             int winnerID = unitBases[0].connectionToClient.connectionId;
             RpcGameOver($"Player {winnerID}");
+
+            OnServerGameOver?.Invoke();
         }
 
         #endregion

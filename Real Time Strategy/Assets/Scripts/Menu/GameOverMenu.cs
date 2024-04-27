@@ -40,7 +40,7 @@ namespace RTS.Menu
         {
             winnerText.text = $"{winner} Has Won!";
             gameOverMenuParent.SetActive(true);
-            Debug.Log("Yooo");
+            
         }
 
     }
