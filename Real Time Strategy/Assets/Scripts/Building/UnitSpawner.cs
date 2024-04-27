@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace RTS.Building
+namespace RTS.Buildings
 {
     public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
     {

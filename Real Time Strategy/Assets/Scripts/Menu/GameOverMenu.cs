@@ -1,5 +1,5 @@
 using Mirror;
-using RTS.Building;
+using RTS.Buildings;
 using System;
 using System.Collections;
 using System.Collections.Generic;

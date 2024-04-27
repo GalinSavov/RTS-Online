@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-using RTS.Building;
+using RTS.Buildings;
 using UnityEngine.SceneManagement;
+
 
 namespace RTS.Network
 {

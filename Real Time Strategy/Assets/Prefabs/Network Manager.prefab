@@ -105,7 +105,7 @@ MonoBehaviour:
   playerSpawnMethod: 1
   spawnPrefabs:
   - {fileID: 8064279436465328553, guid: 2490bede7240b89469c177fb90cd8204, type: 3}
-  - {fileID: 8287116406934344454, guid: a69adeae44f460143b748512a53285a8, type: 3}
+  - {fileID: 5305902003487693403, guid: b84baafd99a4faf46810714ba53c7a19, type: 3}
   - {fileID: 3885943848999722114, guid: 9abaf2632d18b444f8ed5eec2247792e, type: 3}
   - {fileID: 8347624062017898007, guid: 4ef5fe80e209f7348a835cbcdc821566, type: 3}
   exceptionsDisconnect: 1
@@ -123,7 +123,7 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
-  unitSpawnerPrefab: {fileID: 8287116406934344454, guid: a69adeae44f460143b748512a53285a8,
+  unitSpawnerPrefab: {fileID: 5305902003487693403, guid: b84baafd99a4faf46810714ba53c7a19,
     type: 3}
   gameOverHandlerPrefab: {fileID: 9159047293277334838, guid: 4ef5fe80e209f7348a835cbcdc821566,
     type: 3}

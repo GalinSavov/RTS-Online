@@ -4,17 +4,22 @@ using UnityEngine;
 using RTS.Core;
 using Mirror;
 using System;
+using RTS.Buildings;
 
 namespace RTS.Network
 {
     public class RTSPlayer : NetworkBehaviour
     {
-
-        [SerializeField] private List<Unit> myUnits = new List<Unit>();
+         private List<Unit> myUnits = new List<Unit>();
+         private List<Building> myBuildings = new List<Building>();
 
         public List<Unit> GetMyUnits()
         {
             return myUnits;
+        }
+        public List<Building> GetMyBuildings()
+        {
+            return myBuildings;
         }
 
         #region Server
@@ -25,12 +30,21 @@ namespace RTS.Network
             Unit.ServerOnUnitSpawned += ServerHandleUnitSpawned;
             Unit.ServerOnUnitDespawned += ServerHandleUnitDespawned;
 
+            Building.ServerOnBuildingSpawned += ServerHandleBuildingSpawned;
+            Building.ServerOnBuildingDespawned += ServerHandleBuildingDespawned;
+
         }
+
+       
+
         //this happens when the RTS player is despawned from the server aka AFTER the unit is despawned from the server
         public override void OnStopServer()
         {
             Unit.ServerOnUnitSpawned -= ServerHandleUnitSpawned;
             Unit.ServerOnUnitDespawned -= ServerHandleUnitDespawned;
+
+            Building.ServerOnBuildingSpawned -= ServerHandleBuildingSpawned;
+            Building.ServerOnBuildingDespawned -= ServerHandleBuildingDespawned;
         }
         private void ServerHandleUnitSpawned(Unit unit)
         {
@@ -46,6 +60,21 @@ namespace RTS.Network
 
             myUnits.Remove(unit);
         }
+       
+        private void ServerHandleBuildingSpawned(Building building)
+        {
+            //check if this unit belongs to the same client connection as the Player object
+            if (building.connectionToClient.connectionId != connectionToClient.connectionId) return;
+
+            myBuildings.Add(building);
+        }
+        private void ServerHandleBuildingDespawned(Building building)
+        {
+            //check if this unit belongs to the same client connection as the Player object
+            if (building.connectionToClient.connectionId != connectionToClient.connectionId) return;
+
+            myBuildings.Remove(building);
+        }
 
         #endregion
 
@@ -56,12 +85,21 @@ namespace RTS.Network
             if (NetworkServer.active) return;
             Unit.ClientAuthorityOnUnitSpawned += HandleClientAuthorityOnUnitSpawned;
             Unit.ClientAuthorityOnUnitDespawned += HandleClientAuthorityOnUnitDespawned;
+
+            Building.ClientOnBuildingSpawned += HandleClientAuthorityOnBuildingSpawned;
+            Building.ClientOnBuildingDespawned += HandleClientAuthorityOnBuildingDespawned;
         }
+
+        
+
         public override void OnStopClient()
         {
             if (!isClientOnly || !isOwned) return;
             Unit.ClientAuthorityOnUnitSpawned -= HandleClientAuthorityOnUnitSpawned;
             Unit.ClientAuthorityOnUnitDespawned -= HandleClientAuthorityOnUnitDespawned;
+
+            Building.ClientOnBuildingSpawned -= HandleClientAuthorityOnBuildingSpawned;
+            Building.ClientOnBuildingDespawned -= HandleClientAuthorityOnBuildingDespawned;
         }
         private void HandleClientAuthorityOnUnitSpawned(Unit unit)
         {
@@ -71,7 +109,17 @@ namespace RTS.Network
         { 
             myUnits.Remove(unit);
         }
+        private void HandleClientAuthorityOnBuildingSpawned(Building building)
+        {
+            myBuildings.Add(building);
+        }
+        private void HandleClientAuthorityOnBuildingDespawned(Building building)
+        {
+            myBuildings.Remove(building);
+        }
+
         
+
         #endregion
     }
 
