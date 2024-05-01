@@ -69,7 +69,7 @@ namespace RTS.Buildings
             Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             if(Physics.Raycast(ray,out RaycastHit hit, Mathf.Infinity, floorLayerMask))
             {
-                //place building
+                player.CmdTrySpawnBuilding(building.GetID(), hit.point);
             }
             Destroy(buildingPreview);
         }
