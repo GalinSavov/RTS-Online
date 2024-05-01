@@ -83,37 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7640261443644631030
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3536307345190623678}
-  m_Layer: 0
-  m_Name: Spawn Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3536307345190623678
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7640261443644631030}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3878623385383224323}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5596346833068416717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,19 +183,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6829010604589106090}
-    - targetCorrespondingSourceObject: {fileID: 8681133171911596750, guid: 7d97bb393c0f84349a7235618c2ea349,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3536307345190623678}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 290603164691203222, guid: 7d97bb393c0f84349a7235618c2ea349,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4978143756335351350}
-    - targetCorrespondingSourceObject: {fileID: 290603164691203222, guid: 7d97bb393c0f84349a7235618c2ea349,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -2998373667190208076}
   m_SourcePrefab: {fileID: 100100000, guid: 7d97bb393c0f84349a7235618c2ea349, type: 3}
 --- !u!4 &3878623385383224323 stripped
 Transform:
@@ -256,25 +217,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   health: {fileID: 5805536463165623219}
---- !u!114 &-2998373667190208076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305902003487693403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c320417d8e963ab46a8242d56ffbe345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
-  health: {fileID: 5805536463165623219}
-  unitPrefab: {fileID: 8064279436465328553, guid: 2490bede7240b89469c177fb90cd8204,
-    type: 3}
-  unitSpawnPoint: {fileID: 3536307345190623678}
 --- !u!114 &5805536463165623219 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2106382169151395198, guid: 7d97bb393c0f84349a7235618c2ea349,

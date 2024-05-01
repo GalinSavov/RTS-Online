@@ -8,6 +8,7 @@ namespace RTS.Buildings
 {
     public class Building : NetworkBehaviour
     {
+        [SerializeField] private GameObject buildingPreview = null;
         [SerializeField] private Sprite _sprite = null;
         //the building to build will be identified by the server with an id
         [SerializeField] private int _id = -1;
@@ -22,6 +23,7 @@ namespace RTS.Buildings
         public Sprite GetIconSprite () { return _sprite; }
         public int GetID() { return _id; }
         public int GetPrice() { return price; }
+        public GameObject GetBuildingPreview() { return buildingPreview; }
 
         #region Server
         public override void OnStartServer()

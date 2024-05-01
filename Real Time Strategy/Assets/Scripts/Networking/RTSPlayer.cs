@@ -35,8 +35,6 @@ namespace RTS.Network
 
         }
 
-       
-
         //this happens when the RTS player is despawned from the server aka AFTER the unit is despawned from the server
         public override void OnStopServer()
         {
