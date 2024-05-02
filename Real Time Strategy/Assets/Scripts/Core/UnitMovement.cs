@@ -61,16 +61,21 @@ namespace RTS.Core
         [Command]
         public void CmdMovePlayerToPosition(Vector3 position)
         {
+            ServerMoveUnitToPosition(position);
+        }
+        [Server]
+        public void ServerMoveUnitToPosition(Vector3 position)
+        {
             targeter.ClearTarget();
 
             if (!NavMesh.SamplePosition(position, out NavMeshHit navMeshHit, 1f, NavMesh.AllAreas)) return;
-            
+
             playerNavMesh.SetDestination(navMeshHit.position);
-            
+
         }
         #endregion
 
-       
+
     }
 
 }

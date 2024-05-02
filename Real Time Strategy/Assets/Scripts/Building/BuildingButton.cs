@@ -28,15 +28,24 @@ namespace RTS.Buildings
 
             buildingImage.sprite = building.GetIconSprite();
             buildingPrice.text = building.GetPrice().ToString();
+            StartCoroutine(GetPlayer());
         }
-
-        void Update()
+        private IEnumerator GetPlayer()
         {
+            if (player == null)
+            {
+                yield return new WaitForSeconds(0.5f);
+                player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
+            }
+        }
+            void Update()
+        {/*
             if (player == null)
             {
                 player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
 
             }
+            */
             if (buildingPreview == null) return;
 
             UpdateBuildingPreview();

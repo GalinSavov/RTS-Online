@@ -10,10 +10,12 @@ namespace RTS.Core
 {
     public class Unit : NetworkBehaviour
     {
+        
         //unity events to toggle the selected sprite on/off
         [SerializeField] private UnityEvent OnSelected = null;
         [SerializeField] private UnityEvent OnDeselected = null;
 
+        [SerializeField] private int resourcesCost = 10;
         [SerializeField] private UnitMovement unitMovement = null;
         [SerializeField] private Targeter targeter = null;
         [SerializeField] private Health health = null;
@@ -74,6 +76,10 @@ namespace RTS.Core
         public Targeter GetTargeter()
         {
             return targeter;
+        }
+        public int GetResourcesCost()
+        {
+            return resourcesCost;
         }
 
         //used to store the units for each unique client in the game
