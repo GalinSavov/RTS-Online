@@ -12,9 +12,12 @@ namespace RTS.Network
     {
         [SerializeField] private List<Building> buildings = new List<Building>();
 
-         private List<Unit> myUnits = new List<Unit>();
-         private List<Building> myBuildings = new List<Building>();
+        private List<Unit> myUnits = new List<Unit>();
+        private List<Building> myBuildings = new List<Building>();
 
+        [SyncVar(hook = nameof(HandleClientResoursesUpdated))] private int resources = 200;
+
+        public event Action<int> OnClientResourcesUpdated;
         public List<Unit> GetMyUnits()
         {
             return myUnits;
@@ -22,6 +25,15 @@ namespace RTS.Network
         public List<Building> GetMyBuildings()
         {
             return myBuildings;
+        }
+        public int GetResources()
+        {
+            return resources;
+        }
+        [Server]
+        public void SetResources(int newResources)
+        {
+            resources = newResources;
         }
 
         #region Server
@@ -60,7 +72,7 @@ namespace RTS.Network
 
             myUnits.Remove(unit);
         }
-       
+
         private void ServerHandleBuildingSpawned(Building building)
         {
             //check if this unit belongs to the same client connection as the Player object
@@ -109,8 +121,6 @@ namespace RTS.Network
             Building.ClientOnBuildingDespawned += HandleClientAuthorityOnBuildingDespawned;
         }
 
-        
-
         public override void OnStopClient()
         {
             if (!isClientOnly || !isOwned) return;
@@ -125,7 +135,7 @@ namespace RTS.Network
             myUnits.Add(unit);
         }
         private void HandleClientAuthorityOnUnitDespawned(Unit unit)
-        { 
+        {
             myUnits.Remove(unit);
         }
         private void HandleClientAuthorityOnBuildingSpawned(Building building)
@@ -137,7 +147,11 @@ namespace RTS.Network
             myBuildings.Remove(building);
         }
 
-        
+        //hook for the SyncVar resources
+        private void HandleClientResoursesUpdated(int oldValue, int newValue)
+        {
+            OnClientResourcesUpdated?.Invoke(newValue);
+        }
 
         #endregion
     }
