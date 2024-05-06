@@ -32,7 +32,10 @@ namespace RTS.Buildings
         private void Update()
         {
             if (isServer)
+            {
                 ProduceUnits();
+                
+            }
 
             if (isClient)
                 UpdateTimerDisplay();
@@ -99,6 +102,7 @@ namespace RTS.Buildings
         [Server]
         private void ProduceUnits()
         {
+           
             if (queuedUnits == 0) return;
 
             unitTimer += Time.deltaTime;
@@ -137,7 +141,6 @@ namespace RTS.Buildings
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;
             if (!isOwned) return;
-
             CmdSpawnUnit();
         }
 

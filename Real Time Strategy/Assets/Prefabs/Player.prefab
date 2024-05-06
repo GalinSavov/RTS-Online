@@ -68,3 +68,8 @@ MonoBehaviour:
   buildings:
   - {fileID: 3228384277066140166, guid: 5c0e7ab6dec0a9945b0601409e1b6759, type: 3}
   - {fileID: 3228384277066140166, guid: 99d1e376a39e2474f88d385db6784064, type: 3}
+  myBuildings: []
+  buildingLayerMask:
+    serializedVersion: 2
+    m_Bits: 321
+  buildingRangeLimit: 10

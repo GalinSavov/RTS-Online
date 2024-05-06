@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace RTS.Buildings
 {
-    public class BuldingButton : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
+    public class BuldingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [SerializeField] private Building building = null;
         [SerializeField] private Image buildingImage = null;
@@ -21,6 +21,7 @@ namespace RTS.Buildings
         private RTSPlayer player;
         private GameObject buildingPreview;
         private Renderer buildingRenderer;
+        private BoxCollider buildingCollider;
 
         void Start()
         {
@@ -29,6 +30,8 @@ namespace RTS.Buildings
             buildingImage.sprite = building.GetIconSprite();
             buildingPrice.text = building.GetPrice().ToString();
             StartCoroutine(GetPlayer());
+            buildingCollider = building.GetComponent<BoxCollider>();
+            
         }
         private IEnumerator GetPlayer()
         {
@@ -38,14 +41,8 @@ namespace RTS.Buildings
                 player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
             }
         }
-            void Update()
-        {/*
-            if (player == null)
-            {
-                player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
-
-            }
-            */
+        void Update()
+        {
             if (buildingPreview == null) return;
 
             UpdateBuildingPreview();
@@ -57,26 +54,30 @@ namespace RTS.Buildings
             if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorLayerMask)) return;
 
             buildingPreview.transform.position = hit.point;
-            
-            if(!buildingPreview.activeSelf)
-                buildingPreview.SetActive(true);
+
+            if (!player.CanPlaceBuilding(buildingCollider, hit.point))
+                buildingRenderer.material.SetColor("_BaseColor", Color.red);
+            else
+                buildingRenderer.material.SetColor("_BaseColor", Color.green);
         }
 
         public void OnPointerDown(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;
 
+            if (player.GetResources() < building.GetPrice()) return;
+
             buildingPreview = Instantiate(building.GetBuildingPreview());
             buildingRenderer = buildingPreview.GetComponentInChildren<Renderer>();
 
-            buildingPreview.SetActive(false);
+
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
             if (buildingPreview == null) return;
             Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if(Physics.Raycast(ray,out RaycastHit hit, Mathf.Infinity, floorLayerMask))
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorLayerMask))
             {
                 player.CmdTrySpawnBuilding(building.GetID(), hit.point);
             }
