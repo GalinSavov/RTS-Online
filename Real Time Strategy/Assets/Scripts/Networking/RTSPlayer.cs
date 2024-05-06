@@ -15,6 +15,8 @@ namespace RTS.Network
         private List<Unit> myUnits = new List<Unit>();
         [SerializeField] private List<Building> myBuildings = new List<Building>();
 
+        private Color teamColor = new Color();
+
         [SyncVar(hook = nameof(HandleClientResoursesUpdated))] private int resources = 200;
         [SerializeField] private LayerMask buildingLayerMask = new LayerMask();
         [SerializeField] private float buildingRangeLimit = 5f;
@@ -50,10 +52,9 @@ namespace RTS.Network
         {
             return resources;
         }
-        [Server]
-        public void SetResources(int newResources)
+        public Color GetTeamColor()
         {
-            resources = newResources;
+            return teamColor;
         }
 
         #region Server
@@ -77,6 +78,16 @@ namespace RTS.Network
 
             Building.ServerOnBuildingSpawned -= ServerHandleBuildingSpawned;
             Building.ServerOnBuildingDespawned -= ServerHandleBuildingDespawned;
+        }
+        [Server]
+        public void SetResources(int newResources)
+        {
+            resources = newResources;
+        }
+        [Server]
+        public void SetColor(Color color)
+        {
+            teamColor = color;
         }
         private void ServerHandleUnitSpawned(Unit unit)
         {

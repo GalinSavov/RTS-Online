@@ -18,6 +18,8 @@ namespace RTS.Network
         {
             base.OnServerAddPlayer(conn);
 
+            RTSPlayer player = conn.identity.GetComponent<RTSPlayer>();
+            player.SetColor(new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
             //first, create a unit spawner on the server
             GameObject unitSpawnerInstance = Instantiate(
                 unitSpawnerPrefab, 
