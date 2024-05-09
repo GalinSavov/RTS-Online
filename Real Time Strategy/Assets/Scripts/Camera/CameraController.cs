@@ -9,9 +9,9 @@ namespace RTS.Cameras
     public class CameraController : NetworkBehaviour
     {
 
-        [SerializeField] private Transform _cinemachineCameraTransform = null;
-        [SerializeField] private float _speed = 20f;
-        [SerializeField] private float _screenBorderOffset = 10f;
+        [SerializeField] private Transform _cinemachineCameraTransform = null; //reference to cinamachine camera
+        [SerializeField] private float _speed = 20f; // how fast to move the camera
+        [SerializeField] private float _screenBorderOffset = 10f; 
         [SerializeField] private Vector2 _screenXLimits = Vector2.zero;
         [SerializeField] private Vector2 _screenZLimits = Vector2.zero;
 
@@ -38,13 +38,12 @@ namespace RTS.Cameras
         private void Update()
         {
             if (!isOwned || !Application.isFocused) return;
-
-            UpdateCameraPosition();
         }
 
         [ClientCallback]
         private void LateUpdate()
         {
+            UpdateCameraPosition();
         }
 
         /// <summary>
