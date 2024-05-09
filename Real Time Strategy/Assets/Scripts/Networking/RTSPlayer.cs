@@ -20,6 +20,7 @@ namespace RTS.Network
         [SyncVar(hook = nameof(HandleClientResoursesUpdated))] private int resources = 200;
         [SerializeField] private LayerMask buildingLayerMask = new LayerMask();
         [SerializeField] private float buildingRangeLimit = 5f;
+        [SerializeField] private Transform cameraTransform = null;
 
         public event Action<int> OnClientResourcesUpdated;
 
@@ -55,6 +56,11 @@ namespace RTS.Network
         public Color GetTeamColor()
         {
             return teamColor;
+        }
+
+        public Transform GetCameraTransform()
+        {
+            return cameraTransform;
         }
 
         #region Server
