@@ -184,8 +184,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   buildings:
-  - {fileID: 3228384277066140166, guid: 5c0e7ab6dec0a9945b0601409e1b6759, type: 3}
+  - {fileID: 6440993331512080144, guid: a63139cb9c0297642bf175bc31f68a82, type: 3}
   - {fileID: 3228384277066140166, guid: 99d1e376a39e2474f88d385db6784064, type: 3}
+  - {fileID: 6914366068473525794, guid: 70e99af48a1f58449af0ddbdde5721a2, type: 3}
+  - {fileID: 356662937638936932, guid: 9fbff1b17e506e546b98b8c7b39dadbb, type: 3}
   myBuildings: []
   buildingLayerMask:
     serializedVersion: 2

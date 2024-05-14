@@ -983,11 +983,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6622878617356052469, guid: e96a25144d6a9bd409889b57abb31ba1,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 6440993331512080144, guid: a63139cb9c0297642bf175bc31f68a82,
+        type: 3}
+    - target: {fileID: 6669666084338257891, guid: e96a25144d6a9bd409889b57abb31ba1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669666084338257891, guid: e96a25144d6a9bd409889b57abb31ba1,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669666084338257891, guid: e96a25144d6a9bd409889b57abb31ba1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669666084338257891, guid: e96a25144d6a9bd409889b57abb31ba1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669666084338257891, guid: e96a25144d6a9bd409889b57abb31ba1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669666084338257891, guid: e96a25144d6a9bd409889b57abb31ba1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7536745349847503753, guid: e96a25144d6a9bd409889b57abb31ba1,
         type: 3}
       propertyPath: building
       value: 
-      objectReference: {fileID: 3228384277066140166, guid: 99d1e376a39e2474f88d385db6784064,
+      objectReference: {fileID: 356662937638936932, guid: 9fbff1b17e506e546b98b8c7b39dadbb,
         type: 3}
     - target: {fileID: 8609244286793939791, guid: e96a25144d6a9bd409889b57abb31ba1,
         type: 3}
@@ -1034,7 +1070,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1660493083}
   - component: {fileID: 1660493082}
-  - component: {fileID: 1660493081}
   - component: {fileID: 1660493080}
   m_Layer: 0
   m_Name: Minimap Camera
@@ -1087,14 +1122,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1660493081
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660493079}
-  m_Enabled: 1
 --- !u!20 &1660493082
 Camera:
   m_ObjectHideFlags: 0
