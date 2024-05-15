@@ -843,7 +843,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 911bbb60920312e4280491609cfb2fb4, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6da73e73504593f4fb07f763dfef8094, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1140746209
 Transform:
@@ -1558,6 +1558,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107134772475580062, guid: 8293b964db4529945921e21a568b672f,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107134772475580062, guid: 8293b964db4529945921e21a568b672f,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107134772475580062, guid: 8293b964db4529945921e21a568b672f,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107134772475580062, guid: 8293b964db4529945921e21a568b672f,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

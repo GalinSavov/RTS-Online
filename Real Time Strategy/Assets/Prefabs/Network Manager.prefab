@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 350555971153961597}
   - component: {fileID: 1228711913891762031}
-  - component: {fileID: 7801378600178645264}
   - component: {fileID: 258154957836511970}
   m_Layer: 0
   m_Name: Network Manager
@@ -58,20 +57,6 @@ MonoBehaviour:
   clientMaxReceivesPerTick: 1000
   clientSendQueueLimit: 10000
   clientReceiveQueueLimit: 10000
---- !u!114 &7801378600178645264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7115941138738873837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetX: 0
-  offsetY: 0
 --- !u!114 &258154957836511970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +77,7 @@ MonoBehaviour:
   autoStartServerBuild: 0
   autoConnectClientBuild: 0
   offlineScene: Assets/Scenes/MenuScene.unity
-  onlineScene: Assets/Scenes/Map_01Scene.unity
+  onlineScene: 
   transport: {fileID: 1228711913891762031}
   networkAddress: localhost
   maxConnections: 100
@@ -104,10 +89,18 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 1
   spawnPrefabs:
-  - {fileID: 8064279436465328553, guid: 2490bede7240b89469c177fb90cd8204, type: 3}
   - {fileID: 5305902003487693403, guid: b84baafd99a4faf46810714ba53c7a19, type: 3}
-  - {fileID: 3885943848999722114, guid: 9abaf2632d18b444f8ed5eec2247792e, type: 3}
   - {fileID: 8347624062017898007, guid: 4ef5fe80e209f7348a835cbcdc821566, type: 3}
+  - {fileID: 5305902003487693403, guid: 99d1e376a39e2474f88d385db6784064, type: 3}
+  - {fileID: 3176653985406771114, guid: b8c48d70701a82d4d9d20286e0876b81, type: 3}
+  - {fileID: 6483310212725515295, guid: 15939fd9f78f7d941a02bc2e41a3ec1b, type: 3}
+  - {fileID: 4327078433088530253, guid: a63139cb9c0297642bf175bc31f68a82, type: 3}
+  - {fileID: 1302383799704192446, guid: a536eaae4bc973a4bbb9b1e54947d88c, type: 3}
+  - {fileID: 4223000865804510847, guid: 70e99af48a1f58449af0ddbdde5721a2, type: 3}
+  - {fileID: 2177887529118249045, guid: 4c23b441144c76b4c98eb12ea0ff786d, type: 3}
+  - {fileID: 7033708557720957241, guid: 9fbff1b17e506e546b98b8c7b39dadbb, type: 3}
+  - {fileID: 6598495501380459338, guid: e5ea1e505d78ee44c985e7e40d189315, type: 3}
+  - {fileID: 6089640333556067447, guid: e2eb4fe3e9905044ca7aa82d8120663d, type: 3}
   exceptionsDisconnect: 1
   snapshotSettings:
     bufferTimeMultiplier: 2
@@ -123,7 +116,7 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
-  unitSpawnerPrefab: {fileID: 5305902003487693403, guid: b84baafd99a4faf46810714ba53c7a19,
+  unitBasePrefab: {fileID: 5305902003487693403, guid: b84baafd99a4faf46810714ba53c7a19,
     type: 3}
   gameOverHandlerPrefab: {fileID: 9159047293277334838, guid: 4ef5fe80e209f7348a835cbcdc821566,
     type: 3}

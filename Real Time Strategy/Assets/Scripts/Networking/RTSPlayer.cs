@@ -23,7 +23,9 @@ namespace RTS.Network
         [SerializeField] private Transform cameraTransform = null;
 
         public event Action<int> OnClientResourcesUpdated;
+        public static event Action <bool> AuthorityOnPartyOwnerStateUpdated;
 
+        [SyncVar(hook = nameof(AuthorityHandlePartyOwnerStateUpdated))] private bool isPartyOwner = false;
         public bool CanPlaceBuilding(BoxCollider buildingCollider, Vector3 point)
         {
             //check if the building collides with another building
@@ -62,6 +64,10 @@ namespace RTS.Network
         {
             return cameraTransform;
         }
+        public bool GetIsPartyOwner()
+        {
+            return isPartyOwner;
+        }
 
         #region Server
 
@@ -94,6 +100,11 @@ namespace RTS.Network
         public void SetColor(Color color)
         {
             teamColor = color;
+        }
+        [Server]
+        public void SetPartyOwner(bool isPartyOwner)
+        {
+            this.isPartyOwner = isPartyOwner;
         }
         private void ServerHandleUnitSpawned(Unit unit)
         {
@@ -154,6 +165,13 @@ namespace RTS.Network
             SetResources(resources - buildingToPlace.GetPrice());
         }
 
+        [Command]
+        public void CmdStartGame()
+        {
+            if(!isPartyOwner) return;
+
+            ((RTSNetworkManager)NetworkManager.singleton).StartGame();
+        }
         #endregion
 
         #region Client
@@ -167,10 +185,20 @@ namespace RTS.Network
             Building.ClientOnBuildingSpawned += HandleClientAuthorityOnBuildingSpawned;
             Building.ClientOnBuildingDespawned += HandleClientAuthorityOnBuildingDespawned;
         }
+        public override void OnStartClient()
+        {
+            if (NetworkServer.active) return;
 
+            ((RTSNetworkManager)NetworkManager.singleton).Players.Add(this);
+        }
         public override void OnStopClient()
         {
-            if (!isClientOnly || !isOwned) return;
+            if (!isClientOnly) return;
+
+            ((RTSNetworkManager)NetworkManager.singleton).Players.Remove(this);
+
+            if (!isOwned) return;
+
             Unit.ClientAuthorityOnUnitSpawned -= HandleClientAuthorityOnUnitSpawned;
             Unit.ClientAuthorityOnUnitDespawned -= HandleClientAuthorityOnUnitDespawned;
 
@@ -193,11 +221,18 @@ namespace RTS.Network
         {
             myBuildings.Remove(building);
         }
+        
 
         //hook for the SyncVar resources
         private void HandleClientResoursesUpdated(int oldValue, int newValue)
         {
             OnClientResourcesUpdated?.Invoke(newValue);
+        }
+        private void AuthorityHandlePartyOwnerStateUpdated(bool oldState, bool newState)
+        {
+            if (!isOwned) return;
+
+            AuthorityOnPartyOwnerStateUpdated?.Invoke(newState);
         }
 
         #endregion
