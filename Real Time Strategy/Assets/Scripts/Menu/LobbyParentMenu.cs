@@ -3,6 +3,7 @@ using RTS.Network;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,11 +14,13 @@ namespace RTS.Menu
     {
         [SerializeField] private GameObject _lobbyParentUI = null;
         [SerializeField] private Button startGameButton = null;
+        [SerializeField] private TextMeshProUGUI[] playerTextFields = null;
 
         private void OnEnable()
         {
             RTSNetworkManager.ClientOnConnected += HandleClientConnected;
             RTSPlayer.AuthorityOnPartyOwnerStateUpdated += AuthorityHandlePartyOwnerStateUpdated;
+            RTSPlayer.OnClientInfoUpdated += HandleClientInfoUpdated;
         }
 
         
@@ -26,11 +29,30 @@ namespace RTS.Menu
         {
             RTSNetworkManager.ClientOnConnected -= HandleClientConnected;
             RTSPlayer.AuthorityOnPartyOwnerStateUpdated -= AuthorityHandlePartyOwnerStateUpdated;
+            RTSPlayer.OnClientInfoUpdated -= HandleClientInfoUpdated;
+
         }
 
         private void HandleClientConnected()
         {
             _lobbyParentUI.SetActive(true);
+        }
+
+        private void HandleClientInfoUpdated()
+        {
+            List<RTSPlayer> players = ((RTSNetworkManager)NetworkManager.singleton).Players;
+
+            for (int i = 0; i < players.Count; i++)
+            {
+                playerTextFields[i].text = players[i].GetDisplayName();
+            }
+
+            for (int i = players.Count; i < playerTextFields.Length; i++)
+            {
+                playerTextFields[i].text = "Waiting for player..";
+            }
+
+            startGameButton.interactable = players.Count >=2 ;    
         }
         public void LeaveLobby()
         {

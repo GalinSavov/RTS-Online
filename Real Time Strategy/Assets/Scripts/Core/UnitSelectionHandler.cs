@@ -24,16 +24,9 @@ namespace RTS.Core
             mainCamera = Camera.main;
             Unit.ClientAuthorityOnUnitDespawned += HandleAuthorityOnUnitDespawned;
             GameOverHandler.OnCLientGameOver += HandleOnClientGameOver;
-            //StartCoroutine(GetPlayer());
+            player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
         }
-        private IEnumerator GetPlayer()
-        {
-            if (player == null)
-            {
-                yield return new WaitForSeconds(0.5f);
-                player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
-            }
-        }
+
         private void OnDestroy()
         {
             Unit.ClientAuthorityOnUnitDespawned -= HandleAuthorityOnUnitDespawned;
@@ -54,7 +47,7 @@ namespace RTS.Core
 
         private void Update()
         {
-            StartCoroutine(GetPlayer());
+            
             //it is the logic behind dragging and selecting with the mouse 
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {

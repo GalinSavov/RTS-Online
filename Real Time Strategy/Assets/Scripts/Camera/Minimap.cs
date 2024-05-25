@@ -16,22 +16,19 @@ namespace RTS.Cameras
 
         private Transform playerCameraTransform;
 
+        private void Start()
+        {
+           playerCameraTransform = NetworkClient.connection.identity.GetComponent<RTSPlayer>().GetCameraTransform();
+
+        }
+
         private void Update()
         {
-            StartCoroutine(GetPlayerCamera());
-            //if (playerCameraTransform == null) return;
+            
             if (NetworkClient.connection.identity == null) return;
 
         }
 
-        private IEnumerator GetPlayerCamera()
-        {
-            if (playerCameraTransform == null)
-            {
-                yield return new WaitForSeconds(0.5f);
-                playerCameraTransform = NetworkClient.connection.identity.GetComponent<RTSPlayer>().GetCameraTransform();
-            }
-        }
         private void MoveCamera()
         {
             Vector2 mousePosition = Mouse.current.position.ReadValue();

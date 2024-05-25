@@ -2223,6 +2223,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lobbyParentUI: {fileID: 2074809312}
   startGameButton: {fileID: 1692538301}
+  playerTextFields:
+  - {fileID: 1671315118}
+  - {fileID: 1577662912}
+  - {fileID: 1044476965}
+  - {fileID: 1602761398}
 --- !u!1 &723905180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,7 +3273,7 @@ GameObject:
   - component: {fileID: 1044476966}
   - component: {fileID: 1044476965}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Player 3 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4293,7 +4298,7 @@ GameObject:
   - component: {fileID: 1577662913}
   - component: {fileID: 1577662912}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Player 2 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4560,7 +4565,7 @@ GameObject:
   - component: {fileID: 1602761399}
   - component: {fileID: 1602761398}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Player 4 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4694,7 +4699,7 @@ GameObject:
   - component: {fileID: 1671315119}
   - component: {fileID: 1671315118}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Player 1 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -29,6 +29,12 @@ namespace RTS.Buildings
         [SyncVar] private float unitTimer;
         [SyncVar(hook = nameof(HandleClientQueuedUnits))] private int queuedUnits;
 
+        private void Start()
+        {
+           player = connectionToClient.identity.GetComponent<RTSPlayer>();
+
+        }
+
         private void Update()
         {
             if (isServer)
@@ -40,15 +46,6 @@ namespace RTS.Buildings
             if (isClient)
                 UpdateTimerDisplay();
 
-        }
-
-        private IEnumerator GetPlayer()
-        {
-            if (player == null)
-            {
-                yield return new WaitForSeconds(0.5f);
-                player = connectionToClient.identity.GetComponent<RTSPlayer>();
-            }
         }
             
         private void UpdateTimerDisplay()
@@ -87,7 +84,7 @@ namespace RTS.Buildings
         {
             if (queuedUnits == maxUnitQueue) return;
 
-            StartCoroutine(GetPlayer());
+            
 
             if(player != null)
             {

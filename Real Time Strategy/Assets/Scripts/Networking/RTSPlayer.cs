@@ -24,8 +24,13 @@ namespace RTS.Network
 
         public event Action<int> OnClientResourcesUpdated;
         public static event Action <bool> AuthorityOnPartyOwnerStateUpdated;
+        public static event Action  OnClientInfoUpdated;
 
         [SyncVar(hook = nameof(AuthorityHandlePartyOwnerStateUpdated))] private bool isPartyOwner = false;
+
+        [SyncVar(hook = nameof(HandleClientDisplayNameUpdated))]private string displayName;
+
+       
         public bool CanPlaceBuilding(BoxCollider buildingCollider, Vector3 point)
         {
             //check if the building collides with another building
@@ -68,6 +73,10 @@ namespace RTS.Network
         {
             return isPartyOwner;
         }
+        public string GetDisplayName()
+        {
+            return displayName;
+        }
 
         #region Server
 
@@ -79,6 +88,8 @@ namespace RTS.Network
 
             Building.ServerOnBuildingSpawned += ServerHandleBuildingSpawned;
             Building.ServerOnBuildingDespawned += ServerHandleBuildingDespawned;
+
+            DontDestroyOnLoad(gameObject);
 
         }
 
@@ -106,6 +117,12 @@ namespace RTS.Network
         {
             this.isPartyOwner = isPartyOwner;
         }
+        [Server]
+        public void SetDisplayName(string displayName)
+        {
+            this.displayName = displayName;
+        }
+        
         private void ServerHandleUnitSpawned(Unit unit)
         {
             //check if this unit belongs to the same client connection as the Player object
@@ -190,9 +207,14 @@ namespace RTS.Network
             if (NetworkServer.active) return;
 
             ((RTSNetworkManager)NetworkManager.singleton).Players.Add(this);
+
+            DontDestroyOnLoad(gameObject);
+
         }
         public override void OnStopClient()
         {
+            OnClientInfoUpdated?.Invoke();
+
             if (!isClientOnly) return;
 
             ((RTSNetworkManager)NetworkManager.singleton).Players.Remove(this);
@@ -228,6 +250,12 @@ namespace RTS.Network
         {
             OnClientResourcesUpdated?.Invoke(newValue);
         }
+
+        private void HandleClientDisplayNameUpdated(string oldValue, string newValue)
+        {
+            OnClientInfoUpdated?.Invoke();
+        }
+
         private void AuthorityHandlePartyOwnerStateUpdated(bool oldState, bool newState)
         {
             if (!isOwned) return;

@@ -29,17 +29,9 @@ namespace RTS.Buildings
 
             buildingImage.sprite = building.GetIconSprite();
             buildingPrice.text = building.GetPrice().ToString();
-            StartCoroutine(GetPlayer());
+            player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
             buildingCollider = building.GetComponent<BoxCollider>();
             
-        }
-        private IEnumerator GetPlayer()
-        {
-            if (player == null)
-            {
-                yield return new WaitForSeconds(0.5f);
-                player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
-            }
         }
         void Update()
         {

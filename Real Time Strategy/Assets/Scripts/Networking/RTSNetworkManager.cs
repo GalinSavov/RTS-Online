@@ -33,6 +33,8 @@ namespace RTS.Network
 
             Players.Add(player);
 
+            player.SetDisplayName($"Player {Players.Count}");
+
             player.SetColor(new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f)));
 
             player.SetPartyOwner(Players.Count == 1);
