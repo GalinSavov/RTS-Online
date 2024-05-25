@@ -5071,6 +5071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3c6cad261aa194fb1185bec519605e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  landingPagePanel: {fileID: 29066346}
+  useSteam: 0
 --- !u!1 &1957115465
 GameObject:
   m_ObjectHideFlags: 0
